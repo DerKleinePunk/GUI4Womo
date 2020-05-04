@@ -1,0 +1,28 @@
+FROM balenalib/raspberrypi3-debian-python:latest-buster-build as build
+MAINTAINER Punk
+
+RUN [ "cross-build-start" ]
+
+ARG UID
+ARG GID
+
+RUN echo $UID
+RUN echo $GID
+
+ENV HOME /home/pi
+
+RUN useradd -ms /bin/bash pi
+
+ARG DEBIAN_FRONTEND=noninteractive
+#RUN apt-get update 
+#RUN apt-get upgrade
+#RUN apt-get dist-upgrade 
+#RUN apt-get install -y \ 
+#	git \
+#	nano \
+#	wget 
+
+RUN [ "cross-build-end" ] 
+
+USER pi
+WORKDIR /home/pi
