@@ -1,1 +1,7 @@
 https://stackoverflow.com/questions/41083436/how-to-play-sound-in-a-docker-container
+
+https://www.eclipse.org/paho/clients/c/
+
+MQTT in C
+
+https://www.eclipse.org/paho/clients/c/
